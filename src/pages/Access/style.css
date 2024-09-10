@@ -3,7 +3,7 @@
  align-items: center;
  justify-content: center;
  flex-direction: column;
- padding-top: 20rem;
+ padding-top: 10rem;
 }
 
 h1{
@@ -71,6 +71,18 @@ button:active{
  transition: 0.1s;
 }
  
+p a{
+    text-decoration:none;
+    font-size: 15px;
+    border-bottom:1px solid black;
+    font-weight:400;
+    color:#000;
+}
+
+p a:hover{
+    color:#858585;
+    transition: 0.3s ease-in-out;
+}
 
 h1::after{
  content: " ";
