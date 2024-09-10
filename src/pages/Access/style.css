@@ -1,0 +1,88 @@
+.container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ padding-top: 20rem;
+}
+
+h1{
+ text-align: center;
+ color: rgb(0, 0, 0);
+ font-size: 48px;
+ font-weight: 700;
+ position: relative;
+}
+
+form {
+ display: flex;
+ flex-direction: column;
+ padding: 100px;
+ border-radius: 10px;
+ background-color: yellow;
+ align-items: center;
+}
+
+.content{
+ display: flex;
+ flex-direction: column;
+ padding: 10px;
+ width: 27rem;
+ border-style: none;
+}
+
+.content label{
+ font-size: 24px;
+ font-weight: 500;
+ padding-left: 15px;
+}
+
+.content input{
+ border: none;
+ padding: 15px ;
+ border-radius: 90px;
+ margin: 5px;
+ font-size: 14px;
+ font-weight: 600;
+ color: black;
+}
+
+button{
+ display: flex;
+ justify-content: center;
+ padding: 10px 30px;
+ margin: 20px;
+ border-radius: 12px;
+ border: 1px solid black;
+ font-size: 17px;
+ background-color: rgba(109, 109, 109, 0.411);
+}
+
+
+button:hover{
+ background-color: rgba(63, 63, 63, 0.613);
+ border-radius: 20px;
+ transition: 0.3s ease-in-out;
+}
+
+
+button:active{
+ background-color: rgba(7, 137, 7, 0.567);
+ transition: 0.1s;
+}
+ 
+
+h1::after{
+ content: " ";
+ width: 0%;
+ height: 4px;
+ background-color: black;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ transition: 0.5s ease-in-out;
+}
+
+h1:hover::after{
+ width: 100%;
+}
