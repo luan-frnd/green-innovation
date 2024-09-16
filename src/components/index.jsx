@@ -1,5 +1,5 @@
 import "../components/style.css"
-const ErrorPage = () => {
+const components= () => {
 
      return(
       <div className="error"> 
@@ -9,4 +9,4 @@ const ErrorPage = () => {
      );
 };
 
-export default ErrorPage
+export default components
