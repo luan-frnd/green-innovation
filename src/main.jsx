@@ -8,7 +8,7 @@ import { createBrowserRouter ,RouterProvider } from 'react-router-dom';
 
 
 import Home from "./home/home"
-import ErrorPage from './components/ErrorPage';
+import ErrorPage from './components/index';
 import Login from "./home/pages/Access/index"
 import Cadastro from "./home/pages/Register/index"
 
