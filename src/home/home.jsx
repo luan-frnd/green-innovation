@@ -1,6 +1,6 @@
 import Logo from './pages/img/logo2.png'
 import { Link } from 'react-router-dom';
-
+import Grafic from '../home/pages/components/index'
 import '../home/home.css'
 
 
@@ -16,11 +16,14 @@ function Main() {
             <li><Link to={'/login do usuario'} className='lg-rg'>Login/Cadastro</Link></li>
           </ul>
         </nav>
-      <main>
         
-        <h1>PAGE  HOME</h1>
+        <main> 
+          <section className='grafic'>
+            <Grafic/>
 
-      </main>
+            
+          </section>
+          </main>
     </div>
   );
 }
