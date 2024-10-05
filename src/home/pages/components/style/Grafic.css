@@ -1,0 +1,81 @@
+*{
+ margin: 0;
+ padding: auto;
+ box-sizing: border-box;
+}
+.Grafic-container{
+margin-top: 4rem;
+ margin-left:5rem ;
+}
+
+.Grafic-year .Grafic-month {
+ height: 50vh;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-content: center;
+ gap: 2vw;
+ flex-wrap: wrap;
+ background-color: #dddddd00;
+ margin-top: 50em;
+}
+
+.tablist-content .grafic-2 {
+ display: flex;
+ align-items: flex-end;
+ justify-items: center;
+}
+
+.tablist-content .mes {
+
+ font-size: 18px;
+ padding: 6px;
+ margin: 0;
+ border-radius: 0 5px 0 0;
+ border: none;
+ background-color: #acc8b4;
+}
+.tablist-content .ano {
+
+ font-size: 18px;
+ padding: 6px;
+ margin: 0;
+ border-radius: 5px 0 0 0;;
+ border: none;
+ background-color: #adc8b4;
+}
+
+.dataCard {
+ background-color: #adc8b4;
+ border-radius: 0  0.5em  0.5em  0.5em ;
+ box-shadow: rgba(0, 255, 47, 0.322) 0px 8px 24px;
+ padding: 2em;
+}
+
+.revenueCard {
+ width: 92%;
+ height: 20rem;
+}
+
+.customerCard {
+ width: 50%;
+ height: 20rem;
+}
+
+.categoryCard {
+ width: 40%;
+ height: 20rem;
+} 
+
+
+.tablist-content  .mes:focus {
+ background-color: #96a89b;
+ transition-duration: 0.8s;
+ transition:ease-in-out  0.7s ;
+}
+
+.tablist-content  .ano:focus {
+ background-color: #96a89b;
+ transition-duration: 0.3s;
+ transition: ease-in-out 0.7s;
+}

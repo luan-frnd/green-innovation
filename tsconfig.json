@@ -1,22 +1,16 @@
 {
   "compilerOptions": {
-  
-    "target": "es2016",                      
-
-    /* Modules */
-    "module": "commonjs",                             
- 
-    "esModuleInterop": true,                
-   
-    "forceConsistentCasingInFileNames": true,         
-    /* Type Checking */
-    "strict": true,                       
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-jsx",  // ou "react"
+    "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-                             
-  }
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

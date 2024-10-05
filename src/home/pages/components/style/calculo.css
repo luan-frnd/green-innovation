@@ -1,0 +1,194 @@
+.space-y-6{
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  gap: 20px;
+}
+.card-rcc {
+  background-color: #acc8b4;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem; 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+  transition: box-shadow 0.2s ease-in-out;
+  padding: 19rem;
+  margin-bottom: 1.5rem;
+}
+
+.title{
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+}
+
+.cadastro-t{
+  margin-top: 2rem;
+}
+
+.card-scd{
+  background-color: #acc8b4;
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-rcc:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.form-vdesejado{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #0083fd00;
+  border: none;
+}
+
+
+.card-rcc .card-title,
+.card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600; 
+  color: #2d3748; 
+  margin-bottom: 1rem;
+}
+
+
+.card-rcc .card-content,
+.card .card-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a5568; 
+}
+
+form .space-y-4{
+display: flex;
+flex-direction: column;
+
+}
+table {
+  width: 100%; 
+  border-collapse: collapse;
+  margin-top: 1rem; 
+}
+
+th, td {
+  padding: 0.75rem; 
+  text-align: left; 
+  border-bottom: 1px solid #e2e8f0; 
+  color: #2d3748; 
+}
+
+th {
+  font-weight: 700; 
+  color: #2b6cb0; 
+}
+
+td {
+  font-weight: 400; 
+}
+
+.v-desejado-input{
+  border: 1px solid #cbd5e0; 
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  width: 9rem; 
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #2d3748; 
+}
+.tarifa-input {
+
+  border: 1px solid #cbd5e0; 
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  width: 10%; 
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #2d3748; 
+}
+
+.v-desejado-input:focus{
+  border-color: #252c3200;
+  box-shadow: 0 0 0 1px #4d5359; 
+  outline: none;
+}
+
+ .tarifa-input:focus {
+  border-color: #252c3200;
+  box-shadow: 0 0 0 1px #4d5359; 
+  outline: none;
+}
+ .vdesejado-content{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 20px;
+ }
+
+.v-desejado-button {
+  background-color: #0083fd; 
+  margin-top: 2px;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem; 
+  font-weight: 600; 
+  transition: background-color 0.2s ease-in-out;
+}
+
+.v-desejado:hover {
+  background-color: #2b6cb0;
+}
+
+.text-red-500 {
+  color: #e53e3e;
+}
+
+.text-green-500 {
+  color: #48bb78; 
+}
+
+.text-yellow-500 {
+  color: #ecc94b; 
+}
+
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+
+
+.flex {
+  display: flex; 
+}
+
+.flex-col {
+  flex-direction: column; 
+}
+
+
+
+
+.tarifa-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568; 
+
+}
+
+
+@media (min-width: 640px) {
+  .card-rcc, .card {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-rcc, .card {
+    padding: 2.5rem; 
+  }
+}

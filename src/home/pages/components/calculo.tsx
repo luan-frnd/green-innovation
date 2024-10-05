@@ -1,12 +1,17 @@
 "use client"
 
 import React, { useState } from 'react'
-import { useTable, Column } from 'react-table'
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
+import { useTable, Column} from 'react-table'
+
+import { Card, CardContent, CardHeader, CardTitle } from "./@/components/ui/card"
+import { Input } from "./@/components/ui/input"
+import { Button } from "./@/components/ui/button";
+import { Label } from "./@/components/ui/label"
 import { AlertCircle, CheckCircle2, Zap } from 'lucide-react'
+
+
+
+import '../components/style/calculo.css'
 
 
 type TableData = {
@@ -59,11 +64,10 @@ export default function EnergySummary() {
   ]
 
   const resumoColumns: Column<TableData>[] = [
-    { Header: 'Período', accessor: 'periodo' },
-    { Header: 'Consumo (kWh)', accessor: 'consumo' },
-    { Header: 'Custo (R$)', accessor: 'custo' },
+    { Header: 'Período', accessor: 'periodo' as const },
+    { Header: 'Consumo (kWh)', accessor: 'consumo' as const },
+    { Header: 'Custo (R$)', accessor: 'custo' as const },
   ]
-
   const simulacaoData: SimulationData[] = [
     { metrica: 'Consumo Necessário', valor: `${consumoNecessario.toFixed(2)} kWh`, status: <Zap className="inline-block w-5 h-5 text-yellow-500" /> },
     { metrica: 'Consumo Atual', valor: `${consumoMensal.toFixed(2)} kWh`, status: <CheckCircle2 className="inline-block w-5 h-5 text-green-500" /> },
@@ -71,11 +75,11 @@ export default function EnergySummary() {
   ]
 
   const simulacaoColumns: Column<SimulationData>[] = [
-    { Header: 'Métrica', accessor: 'metrica' },
-    { Header: 'Valor', accessor: 'valor' },
-    { Header: 'Status', accessor: 'status' },
+    { Header: 'Métrica', accessor: 'metrica' as const },
+    { Header: 'Valor', accessor: 'valor' as const },
+    { Header: 'Status', accessor: 'status' as const },
   ]
-
+  
   const Table = <T extends object>({ columns, data }: { columns: Column<T>[], data: T[] }) => {
     const {
       getTableProps,
@@ -113,70 +117,77 @@ export default function EnergySummary() {
   }
 
   return (
+    
     <div className="space-y-6">
-      <Card>
-        <CardHeader>
+
+      <Card className='card-rcc'>
+        
+        <CardHeader className='title'>
           <CardTitle>Resumo do Consumo e Custos</CardTitle>
         </CardHeader>
         <CardContent>
           <Table columns={resumoColumns} data={resumoData} />
         </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Cadastro de Tarifa</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col space-y-1.5">
-            <Label htmlFor="tarifa">Valor da Tarifa (R$/kWh)</Label>
-            <Input
-              id="tarifa"
-              placeholder="Ex: 0.75"
-              value={tarifa}
-              onChange={(e) => setTarifa(e.target.value)}
-              type="number"
-              step="0.01"
-              min="0"
-              required
-            />
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Simulação de Consumo Desejado</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={handleValorDesejadoSubmit} className="space-y-4">
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="valorDesejado">Valor Desejado (R$)</Label>
+        <div className="cadastro-t">
+          <CardHeader className='title'>
+            <CardTitle>Cadastro de Tarifa</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-col space-y-1">
+              <Label className='tarifa-label' htmlFor="tarifa">Valor da Tarifa (R$/kWh)</Label>
               <Input
-                id="valorDesejado"
-                placeholder="Ex: 100.00"
-                value={valorDesejado}
-                onChange={(e) => setValorDesejado(e.target.value)}
+              className='tarifa-input'
+                id="tarifa"
+                placeholder="Ex: 0.75"
+                value={tarifa}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTarifa(e.target.value)}
                 type="number"
                 step="0.01"
                 min="0"
                 required
               />
             </div>
-            <Button type="submit">Calcular</Button>
-          </form>
-          {consumoNecessario > 0 && (
-            <div className="mt-6">
-              <Table columns={simulacaoColumns} data={simulacaoData} />
-              {consumoFaltante <= 0 && (
-                <p className="mt-4 text-red-500 font-semibold">
-                  Atenção: Você já ultrapassou o consumo para o valor desejado!
-                </p>
-              )}
-            </div>
-          )}
-        </CardContent>
+          </CardContent>
+        </div>
       </Card>
+
+      <section className='card-scd-container'>
+        <Card className='card-scd'>
+          <CardHeader className='title'>
+            <CardTitle>Simulação de Consumo Desejado</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleValorDesejadoSubmit} className="form-vdesejado">
+        <div className="vdesejado-content">
+          <Label className='v-desejado-label' htmlFor="valorDesejado">Valor Desejado (R$)</Label>
+          <Input
+          className='v-desejado-input'
+            id="valorDesejado" 
+            placeholder="Ex: 100.00" 
+            value={valorDesejado} 
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValorDesejado(e.target.value)} 
+            type="number"
+            step="0.01"
+            min="0"
+            required
+          />
+        </div>
+        <Button className='v-desejado-button' type="submit">Calcular</Button>
+            </form>
+            {consumoNecessario > 0 && (
+        <div className="mt-6">
+          <Table columns={simulacaoColumns} data={simulacaoData} />
+          {consumoFaltante <= 0 && (
+            <p className="mt-4 text-red-500 font-semibold">
+              Atenção: Você já ultrapassou o consumo para o valor desejado!
+            </p>
+          )}
+        </div>
+            )}
+          </CardContent>
+        </Card>
+      </section>
+
     </div>
   )
 }

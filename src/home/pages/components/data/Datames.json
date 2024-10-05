@@ -1,0 +1,57 @@
+[
+  {
+    "mes": "Jan",
+    "consumo": 64854
+
+  },
+  {
+    "mes": "Feb",
+    "consumo": 54628
+
+  },
+  {
+    "mes": "Mar",
+    "consumo": 117238
+
+  },
+  {
+    "mes": "Apr",
+    "consumo": 82830
+  },
+  {
+    "mes": "May",
+    "consumo": 91208
+  },
+  {
+    "mes": "Jun",
+    "consumo": 103609
+    
+  },
+  {
+    "mes": "Jul",
+    "consumo": 90974
+   
+  
+  },
+  {
+    "mes": "Aug",
+    "consumo": 82919
+  },
+  {
+    "mes": "Sep",
+    "consumo": 62407
+  
+  },
+  {
+    "mes": "Oct",
+    "consumo": 82528
+  },
+  {
+    "mes": "Nov",
+    "consumo": 56979
+  },
+  {
+    "mes": "Dec",
+    "consumo": 87436
+  }
+]

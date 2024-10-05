@@ -1,6 +1,8 @@
 import Logo from './pages/img/logo2.png'
 import { Link } from 'react-router-dom';
 import Grafic from '../home/pages/components/index'
+import Calculo from '../home/pages/components/calculo'
+
 import '../home/home.css'
 
 
@@ -10,9 +12,9 @@ function Main() {
         <nav className='navbar'>
           <img src={Logo} alt="" />
           <ul>
-            <li>Home</li>
+            <li >Home</li>
             <li>Economia</li>
-            <li>Contato</li>
+            <li >Contato</li>
             <li><Link to={'/login do usuario'} className='lg-rg'>Login/Cadastro</Link></li>
           </ul>
         </nav>
@@ -20,8 +22,10 @@ function Main() {
         <main> 
           <section className='grafic'>
             <Grafic/>
-
             
+          </section>
+          <section className='calculo'>
+            <Calculo/>
           </section>
           </main>
     </div>
