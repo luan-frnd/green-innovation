@@ -11,11 +11,10 @@ function Main() {
     <div className="container-home">
         <nav className='navbar'>
           <img src={Logo} alt="" />
+          
           <ul>
-            <li >Home</li>
-            <li>Economia</li>
-            <li >Contato</li>
-            <li><Link to={'/login do usuario'} className='lg-rg'>Login/Cadastro</Link></li>
+            <li ><a href="https://chat.whatsapp.com/HLutfQiUb095o6oI29HW0m" target='_blank'>Contato</a></li>
+            <li><Link to={'/login do usuario'} className='lg-rg'>Login/ Cadastro <i class="bi bi-box-arrow-in-right"></i></Link>     </li>
           </ul>
         </nav>
         
