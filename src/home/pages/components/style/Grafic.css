@@ -4,7 +4,7 @@
  box-sizing: border-box;
 }
 .Grafic-container{
-margin-top: 4rem;
+  margin-top: 4rem;
  margin-left:5rem ;
 }
 
@@ -79,3 +79,5 @@ margin-top: 4rem;
  transition-duration: 0.3s;
  transition: ease-in-out 0.7s;
 }
+
+

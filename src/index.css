@@ -8,7 +8,12 @@
   box-sizing: border-box;
   font-family: "Petrona", serif;
 }
-
+#root{
+  background-color: rgb(8, 83, 40);
+  height: 145vh;
+  width: 100%;
+ }
+ 
 @layer base {
   :root {
     --background: 0 0% 100%;
